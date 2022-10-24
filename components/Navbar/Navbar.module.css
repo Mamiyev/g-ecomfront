@@ -1,0 +1,64 @@
+.menuBox {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 350px;
+    height: 100vh;
+    padding: 90px 24px 0;
+    margin: 0;
+    background: rgb(240 240 240);
+    box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition-duration: 0.5s;
+    visibility: hidden;
+}
+
+.menuBoxShow {
+    left: 0;
+    visibility: visible;
+}
+
+.menuHeader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    height: 55px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: rgb(0 0 0 / 15%);
+    font-size: 22px;
+}
+
+.backButton {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.menuLevel {
+    display: flex;
+    transition: transform 0.2s;
+}
+
+.menuLevel > div {
+    min-width: calc(100% + 24px);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 18px;
+    gap: 15px;
+    transition: all 0.5s;
+}
+
+.item .categoryButton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
