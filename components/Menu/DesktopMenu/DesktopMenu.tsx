@@ -11,18 +11,20 @@ export const DesktopMenu: React.FC<IMenuProps> = () => {
 
     return (
         <div className={clsx(css.menuWrap, { [css.menuWrapShow]: isOpened })}>
-            {currentMenu.map((el, i) => (
-                <div key={i} className={css.menuLevel}>
-                    {el.map((l) => (
-                        <div key={l.name} className={css.item}>
-                            {l.children && (
-                                <button onClick={() => onSelectLevel(level + 1, l.children)}>{l.name}</button>
-                            )}
-                            {l.link && <a href="">{l.link}</a>}
-                        </div>
-                    ))}
-                </div>
-            ))}
+            <div className={css.menuLevel}>
+                {currentMenu.map((el, i) => (
+                    <div key={i}>
+                        {el.map((l) => (
+                            <div key={l.name} className={css.item}>
+                                {l.children && (
+                                    <button onClick={() => onSelectLevel(level + 1, l.children)}>{l.name}</button>
+                                )}
+                                {l.link && <a href={l.link}>{l.name}</a>}
+                            </div>
+                        ))}
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

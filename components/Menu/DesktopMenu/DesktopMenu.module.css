@@ -2,14 +2,12 @@
     position: fixed;
     top: 0;
     left: -100%;
-    display: flex;
-    min-width: 400px;
+    min-width: 320px;
     height: 100vh;
     padding: 40px 24px 0;
     margin: 0;
     background: rgb(240 240 240);
     box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
-    gap: 50px;
     overflow-x: hidden;
     overflow-y: auto;
     visibility: hidden;
@@ -18,6 +16,11 @@
 .menuWrapShow {
     left: 0;
     visibility: visible;
+}
+
+.menuLevel {
+    display: flex;
+    gap: 50px;
 }
 
 .item {
