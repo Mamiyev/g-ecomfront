@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Header } from '../components/Header/Header';
+import { MenuContextProvider } from '../context/MenuContextProvider';
 
 const Home: NextPage = () => {
     return (
@@ -10,7 +11,9 @@ const Home: NextPage = () => {
                 <meta name="description" content="ecommerce" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Header />
+            <MenuContextProvider>
+                <Header />
+            </MenuContextProvider>
         </div>
     );
 };
