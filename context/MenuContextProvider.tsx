@@ -1,5 +1,5 @@
 import { createContext, PropsWithChildren, useState } from 'react';
-import { data, IMenuItem } from '../components/Menu/mockData';
+import { data, IMenuItem } from '../components/menu/mockData';
 
 type MenuContextProvider = PropsWithChildren<{}>;
 export type IMenuContext = {

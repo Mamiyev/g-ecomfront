@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Header } from '../components/Header/Header';
+import Layout from '../components/layout/Layout';
 import { MenuContextProvider } from '../context/MenuContextProvider';
 
 const Home: NextPage = () => {
@@ -12,7 +12,7 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MenuContextProvider>
-                <Header />
+                <Layout>body</Layout>
             </MenuContextProvider>
         </div>
     );

@@ -1,13 +1,13 @@
 import React from 'react';
 import useBreakpoint from 'use-breakpoint';
-import { useMenu } from '../../hooks/useMenu';
-import { DesktopMenu } from '../Menu/DesktopMenu/DesktopMenu';
-import { MobileMenu } from '../Menu/MobileMenu/MobileMenu';
-import Button from '../uikit/button/Button';
-import AvatarIcon from '../uikit/icons/AvatarIcon';
-import BasketIcon from '../uikit/icons/BasketIcon';
-import MenuIcon from '../uikit/icons/MenuIcon';
-import Input from '../uikit/input/Input';
+import { useMenu } from '../../../hooks/useMenu';
+import { DesktopMenu } from '../../menu/desktopMenu/DesktopMenu';
+import { MobileMenu } from '../../menu/mobileMenu/MobileMenu';
+import Button from '../../uikit/button/Button';
+import AvatarIcon from '../../uikit/icons/AvatarIcon';
+import BasketIcon from '../../uikit/icons/BasketIcon';
+import MenuIcon from '../../uikit/icons/MenuIcon';
+import Input from '../../uikit/input/Input';
 
 import css from './Header.module.css';
 
