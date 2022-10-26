@@ -5,11 +5,13 @@
     min-width: 320px;
     height: 100vh;
     padding: 40px 24px 0;
+    border-radius: 5px;
     margin: 0;
-    background: rgb(240 240 240);
+    background: rgb(255 255 255);
     box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
     overflow-x: hidden;
     overflow-y: auto;
+    transition-duration: 0.5s;
     visibility: hidden;
 }
 

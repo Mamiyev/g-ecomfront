@@ -15,7 +15,7 @@ export type IMenuContext = {
 export const MenuContext = createContext<IMenuContext | null>(null);
 
 export const MenuContextProvider: React.FC<MenuContextProvider> = ({ children }) => {
-    const [isOpened, setIsOpened] = useState<boolean>(true);
+    const [isOpened, setIsOpened] = useState<boolean>(false);
     const [level, setLevel] = useState<number>(1);
     const [currentMenu, setCurrentMenu] = useState<IMenuItem[][]>([data]);
 
