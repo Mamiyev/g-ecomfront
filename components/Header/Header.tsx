@@ -3,9 +3,11 @@ import useBreakpoint from 'use-breakpoint';
 import { useMenu } from '../../hooks/useMenu';
 import { DesktopMenu } from '../Menu/DesktopMenu/DesktopMenu';
 import { MobileMenu } from '../Menu/MobileMenu/MobileMenu';
+import Button from '../uikit/button/Button';
 import AvatarIcon from '../uikit/icons/AvatarIcon';
 import BasketIcon from '../uikit/icons/BasketIcon';
 import MenuIcon from '../uikit/icons/MenuIcon';
+import Input from '../uikit/input/Input';
 
 import css from './Header.module.css';
 
@@ -23,25 +25,25 @@ export const Header: React.FC<IHeaderProps> = () => {
                     <div className={css.logo}>
                         <h3>Gardener</h3>
                     </div>
-                    <button className={css.menuButton} onClick={() => setIsOpened((prev) => !prev)}>
+                    <Button variant="outlined" className={css.menuButton} onClick={() => setIsOpened((prev) => !prev)}>
                         <MenuIcon />
                         Каталог
-                    </button>
+                    </Button>
                 </div>
                 <div className={css.searchBox}>
-                    <input type="text" />
-                    <button>Поиск</button>
+                    <Input placeholder="Поиск товаров" />
+                    <Button>Найти</Button>
                 </div>
                 <div className={css.iconsWrapper}>
                     <div className={css.address}></div>
                     <div className={css.basket}>
-                        <a className={css.icon} href="">
+                        <a className={css.icon} href="#">
                             <BasketIcon />
                             <span>Корзина</span>
                         </a>
                     </div>
                     <div className={css.logIn}>
-                        <a className={css.icon} href="">
+                        <a className={css.icon} href="#">
                             <AvatarIcon />
                             <span>Войти</span>
                         </a>

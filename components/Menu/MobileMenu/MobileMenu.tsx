@@ -4,6 +4,7 @@ import css from './MobileMenu.module.css';
 import ArrowLeftIcon from '../../uikit/icons/ArrowLeftIcon';
 import ArrowForwardIcon from '../../uikit/icons/ArrowForwardIcon';
 import { useMenu } from '../../../hooks/useMenu';
+import Button from '../../uikit/button/Button';
 
 type IMenuProps = {};
 
@@ -26,10 +27,10 @@ export const MobileMenu: React.FC<IMenuProps> = () => {
         >
             <div className={css.menuHeader}>
                 {level > 1 && (
-                    <button onClick={() => onMoveBackLevel()} className={css.backButton}>
+                    <Button variant="outlined" onClick={() => onMoveBackLevel()} className={css.backButton}>
                         <ArrowLeftIcon />
                         Назад
-                    </button>
+                    </Button>
                 )}
                 {level === 1 && <span>Категории</span>}
                 <button onClick={() => setIsOpened(false)} className={css.button}>
@@ -45,13 +46,13 @@ export const MobileMenu: React.FC<IMenuProps> = () => {
                         {category.map((item) => (
                             <div key={item.name} className={css.item}>
                                 {item.children && (
-                                    <button
+                                    <a
                                         onClick={() => onSelectLevel(level + 1, item.children)}
                                         className={clsx(css.categoryButton)}
                                     >
                                         {item.name}
                                         <ArrowForwardIcon />
-                                    </button>
+                                    </a>
                                 )}
                                 {item.link && <a href={item.link}>{item.name}</a>}
                             </div>

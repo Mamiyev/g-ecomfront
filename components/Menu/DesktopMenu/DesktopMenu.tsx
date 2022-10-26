@@ -17,7 +17,7 @@ export const DesktopMenu: React.FC<IMenuProps> = () => {
                         {el.map((l) => (
                             <div key={l.name} className={css.item}>
                                 {l.children && (
-                                    <button onClick={() => onSelectLevel(level + 1, l.children)}>{l.name}</button>
+                                    <a onClick={() => onSelectLevel(level + 1, l.children)}>{l.name}</a>
                                 )}
                                 {l.link && <a href={l.link}>{l.name}</a>}
                             </div>
