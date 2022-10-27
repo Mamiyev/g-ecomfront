@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import CardSlider from '../components/card-slider/CardSlider';
+import Card from '../components/card/Card';
 import Layout from '../components/layout/Layout';
 import { MenuContextProvider } from '../context/MenuContextProvider';
 
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
             <MenuContextProvider>
                 <Layout>
                     <CardSlider />
+                    <Card />
                 </Layout>
             </MenuContextProvider>
         </div>

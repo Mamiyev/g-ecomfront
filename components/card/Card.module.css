@@ -1,0 +1,10 @@
+.container {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #7fb961;
+    border-radius: 5px;
+}
+
+.card img {
+    width: 300px !important;
+}

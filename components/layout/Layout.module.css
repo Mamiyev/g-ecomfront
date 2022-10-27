@@ -1,6 +1,5 @@
 .container {
     display: flex;
-    overflow: hidden;
     height: 100vh;
     flex-direction: column;
 }
@@ -8,5 +7,6 @@
 .main {
     width: 1180px;
     flex-grow: 1;
+    padding: 20px 0;
     margin: 0 auto;
 }
