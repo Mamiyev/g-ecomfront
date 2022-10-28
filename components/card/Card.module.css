@@ -1,10 +1,17 @@
-.container {
+.card {
     width: 300px;
     padding: 10px;
-    border: 1px solid #7fb961;
+    border: none;
     border-radius: 5px;
+    box-shadow: rgb(149 157 165 / 20%) 0 8px 24px;
+    transition: all 0.2s linear;
 }
 
 .card img {
     width: 300px !important;
+}
+
+.card:hover {
+    outline: 1px solid rgb(56 108 44);
+    transform: scale(1.02);
 }

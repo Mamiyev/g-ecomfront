@@ -3,6 +3,7 @@ import Head from 'next/head';
 import CardSlider from '../components/card-slider/CardSlider';
 import Card from '../components/card/Card';
 import Layout from '../components/layout/Layout';
+import Products from '../components/products/Products';
 import { MenuContextProvider } from '../context/MenuContextProvider';
 
 const Home: NextPage = () => {
@@ -16,7 +17,7 @@ const Home: NextPage = () => {
             <MenuContextProvider>
                 <Layout>
                     <CardSlider />
-                    <Card />
+                    <Products />
                 </Layout>
             </MenuContextProvider>
         </div>
