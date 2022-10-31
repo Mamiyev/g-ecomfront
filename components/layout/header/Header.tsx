@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import React from 'react';
 import useBreakpoint from 'use-breakpoint';
 import { useMenu } from '../../../hooks/useMenu';
-import { DesktopMenu } from '../../menu/desktopMenu/DesktopMenu';
-import { MobileMenu } from '../../menu/mobileMenu/MobileMenu';
+import { DesktopMenu } from '../../menu/DesktopMenu/DesktopMenu';
+import { MobileMenu } from '../../menu/MobileMenu/MobileMenu';
 import Button from '../../uikit/button/Button';
 import AvatarIcon from '../../uikit/icons/AvatarIcon';
 import BasketIcon from '../../uikit/icons/BasketIcon';
@@ -23,7 +24,9 @@ export const Header: React.FC<IHeaderProps> = () => {
             <div className={css.container}>
                 <div className={css.logoWrapper}>
                     <div className={css.logo}>
-                        <h3>Gardener</h3>
+                        <Link href="/products">
+                            <a>Gardener</a>
+                        </Link>
                     </div>
                     <Button variant="outlined" className={css.menuButton} onClick={() => setIsOpened((prev) => !prev)}>
                         <MenuIcon />
@@ -37,10 +40,12 @@ export const Header: React.FC<IHeaderProps> = () => {
                 <div className={css.iconsWrapper}>
                     <div className={css.address}></div>
                     <div className={css.basket}>
-                        <a className={css.icon} href="#">
-                            <BasketIcon />
-                            <span>Корзина</span>
-                        </a>
+                        <Link href="/cart">
+                            <a className={css.icon}>
+                                <BasketIcon />
+                                <span>Корзина</span>
+                            </a>
+                        </Link>
                     </div>
                     <div className={css.logIn}>
                         <a className={css.icon} href="#">
