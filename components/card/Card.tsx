@@ -4,16 +4,33 @@ import css from './Card.module.css';
 import card1 from '../../public/card-1.jpg';
 import Image from 'next/image';
 
-type ICardProps = {};
+export interface Category {
+    id: number;
+    name: string;
+    image: string;
+}
 
-const Card: React.FC<ICardProps> = () => {
+export interface ICardItem {
+    id: number;
+    title: string;
+    price: number;
+    description: string;
+    category: Category;
+    images: string[];
+}
+
+export type ICardProps = {
+    item: ICardItem;
+};
+
+const Card: React.FC<ICardProps> = ({ item }) => {
     return (
         <div className={css.container}>
-            <Link href="/">
+            <Link href={`products/${item.id}`}>
                 <div className={css.card}>
-                    <Image src={card1} alt="" />
-                    <h4>Title</h4>
-                    <div>description</div>
+                    <Image src={item.images[0]} alt="" width="350" height="350" />
+                    <h4>{item.title}</h4>
+                    <div>{item.price}</div>
                 </div>
             </Link>
         </div>

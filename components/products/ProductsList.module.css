@@ -1,12 +1,10 @@
-.container {
-}
-
 .cardsTitle {
     margin-bottom: 20px;
 }
 
 .cardsWrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px 10px;
 }
