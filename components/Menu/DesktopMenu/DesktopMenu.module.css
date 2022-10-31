@@ -33,4 +33,11 @@
     font-size: 18px;
     gap: 15px;
     transition: all 0.5s;
+    cursor: pointer;
+}
+
+.item .categoryButton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { useMenu } from '../../../hooks/useMenu';
+import ArrowForwardIcon from '../../uikit/icons/ArrowForwardIcon';
 
 import css from './DesktopMenu.module.css';
 
@@ -17,7 +18,13 @@ export const DesktopMenu: React.FC<IMenuProps> = () => {
                         {el.map((l) => (
                             <div key={l.name} className={css.item}>
                                 {l.children && (
-                                    <a onClick={() => onSelectLevel(level + 1, l.children)}>{l.name}</a>
+                                    <a
+                                        onClick={() => onSelectLevel(level + 1, l.children)}
+                                        className={css.categoryButton}
+                                    >
+                                        {l.name}
+                                        <ArrowForwardIcon />
+                                    </a>
                                 )}
                                 {l.link && <a href={l.link}>{l.name}</a>}
                             </div>
