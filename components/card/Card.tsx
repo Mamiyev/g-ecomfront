@@ -4,6 +4,7 @@ import css from './Card.module.css';
 import card1 from '../../public/card-1.jpg';
 import Image from 'next/image';
 import Button from '../uikit/button/Button';
+import FavoriteIcon from '../uikit/icons/FavoriteIcon';
 
 export interface Category {
     id: number;
@@ -34,15 +35,21 @@ const Card: React.FC<ICardProps> = ({ item }) => {
                         <h4>{item.title}</h4>
                         <div>{item.price}$</div>
                     </div>
-                    <Button
-                        className={css.button}
-                        onClick={(e) => {
-                            e.preventDefault();
-                            // handle click
-                        }}
-                    >
-                        Добавить в корзину
-                    </Button>
+                    <div className={css.buttonsWrap}>
+                        <Button
+                            variant="outlined"
+                            className={css.button}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                // handle click
+                            }}
+                        >
+                            Купить
+                        </Button>
+                        <button className={css.favoriteButton}>
+                            <FavoriteIcon />
+                        </button>
+                    </div>
                 </div>
             </Link>
         </div>

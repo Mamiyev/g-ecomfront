@@ -7,6 +7,7 @@
     color: white;
     cursor: pointer;
     text-transform: uppercase;
+    transition-duration: 0.5s;
 }
 
 .button.filled {
@@ -14,5 +15,6 @@
 }
 
 .button.outlined {
+    border: 1px solid rgb(56 108 44);
     background: none;
 }
