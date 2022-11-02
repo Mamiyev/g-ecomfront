@@ -31,9 +31,9 @@ const Card: React.FC<ICardProps> = ({ item }) => {
             <Link href={`products/${item.id}`}>
                 <div className={css.card}>
                     <div className={css.cardInfo}>
-                        <Image src={item.images[0]} alt="" width="350" height="350" />
+                        <Image src={item.images[0]} alt="" width="300" height="300" />
                         <h4>{item.title}</h4>
-                        <div>{item.price}$</div>
+                        <div>{item.price} ₽</div>
                     </div>
                     <div className={css.buttonsWrap}>
                         <Button

@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Link from 'next/link';
 import css from './Breadcrumbs.module.css';
 
@@ -8,12 +9,12 @@ type IBreadcrumbsItem = {
 
 type IBreadcrumbs = {
     items: IBreadcrumbsItem[];
+    className?: string;
 };
 
-const Breadcrumbs: React.FC<IBreadcrumbs> = ({ items }) => {
-    console.log('i', items.length);
+const Breadcrumbs: React.FC<IBreadcrumbs> = ({ items, className }) => {
     return (
-        <ul>
+        <ul className={clsx(css.container, className)}>
             {items.map(({ title, link }: IBreadcrumbsItem, index: number) => (
                 <li key={`page_${title}`}>
                     {link ? (
@@ -23,7 +24,7 @@ const Breadcrumbs: React.FC<IBreadcrumbs> = ({ items }) => {
                     ) : (
                         <span>{title}</span>
                     )}
-                    {index !== items.length - 1 && <span>{'->'}</span>}
+                    {index !== items.length - 1 && <span>{' >'}</span>}
                 </li>
             ))}
         </ul>
